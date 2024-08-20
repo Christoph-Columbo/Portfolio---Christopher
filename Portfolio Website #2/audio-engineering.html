@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header1">
+        <h2></h2>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+          <li><a href="Homepage.html">Home Page</a></li>
+          <li><a href="audio-engineering.html">Audio Engineering</a></li>
+          <li><a href="software-engineering.html">Software Engineering</a></li>
+          <li><a href="artistic-design.html">Artistic Design</a></li>
+          <li><a href="management.html">Management</a></li>
+          <li><a href="projects.html">Completed Projects</a></li>
+          <li><a href="education-history.html">Education History</a></li>
+          <li class="contact-tab"><a href="#contact" id="contact-trigger">Contact Me</a></li> <!-- Contact Me tab -->
+      </ul>
+  </nav>
+
+<!-- Contact Popup HTML -->
+<div id="contact-popup" class="popup">
+  <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <form id="contact-form">
+        <label for="from_name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="to_name">Recipient Email:</label>
+        <input type="text" id="email" name="email" required>
+        
+        <label for="job_position">Job Position Offered:</label>
+        <input type="text" id="job_position" name="job_position" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+    
+  </div>
+  </div>
+
+<!-- Contact Me Link -->
+<a id="contact-trigger" href="#contact">Contact Me</a>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+  <article>
+    <p><b>MUSICAL BACKGROUND:</b></p>
+  <div class="paragraph-container">
+    <p class="moving-square-paragraph">I can create a wide variety of thematic sound tracks, audio files and songs. I've been creating music and audio tracks since 2015, orginally from Nashville, Tennessee area I learned from the best and have a talent for the craft.</p>
+    <div class="moving-square"></div>
+  </div>
+    <p>I'm excited to create sound tracks, work with teams to create music that is not only going to grab the audience's attention, but perhaps touch their emotional side.</p>
+    <p>I'm excited to create sound tracks, work with teams to create music that is not only going to grab the audience's attention, but perhaps touch their emotional side.</p>
+    <div class="paragraph-container1">
+      <p class="moving-square-paragraph1">I can create a wide variety of thematic sound tracks, audio files and songs. I've been creating music and audio tracks since 2015, orginally from Nashville, Tennessee area I learned from the best and have a talent for the craft.</p>
+      <div class="moving-square1"></div>
+    </div>
+    <div class="image-container">
+        <img src="protools.png" alt="Pro Tools">
+        <img src="gband.png" alt="GarageBand">
+    </div>
+    
+    <section class="paragraph-container3">
+      <div class="moving-square-paragraph3">
+        <p><b>PLAYABLE TRACKS:</b></p>
+        <div class="moving-squares3">
+          <div class="moving-square3 square1"></div>
+          <div class="moving-square3 square2"></div>
+          <div class="moving-square3 square3"></div>
+          <div class="moving-square3 square4"></div>
+          <div class="moving-square3 square5"></div>
+          <div class="moving-square3 square6"></div>
+          <div class="moving-square3 square7"></div>
+          <div class="moving-square3 square8"></div>
+          <div class="moving-square3 square9"></div>
+          <div class="moving-square3 square10"></div>
+        </div>
+      </div>
+ 
+      <p>Below are six tracks I created, showcasing a range of my skills and creativity. Each track is 
+        inspired by unique themes, including UFO encounters, the mysteries of space, and the raw energy of 
+        rock. These compositions reflect my ability to blend various genres and styles, resulting in 
+        captivating and memorable soundscapes that can elevate any project. Whether it's an intense rock anthem 
+        or a mysterious space-themed melody, these tracks are a testament to my versatility and passion for 
+        audio engineering.
+      </p>
+
+    <!-- BUTTON LAYOUT ON AUDIO PAGE-->
+    <div class="audio-buttons">
+      <div class="button-container">
+          <button onclick="toggleAudio('sad')">Sad Track</button>
+          <audio id="sad" src="sad.mp3"></audio>
+      </div>
+      <div class="button-container">
+          <button onclick="toggleAudio('thematic')">Thematic Track</button>
+          <audio id="thematic" src="Thematic.mp3"></audio>
+      </div>
+      <div class="button-container">
+          <button onclick="toggleAudio('dance')">Dance Track</button>
+          <audio id="dance" src="Dance.mp3"></audio>
+      </div>
+      <div class="button-container">
+          <button onclick="toggleAudio('ufo')">UFO Track</button>
+          <audio id="ufo" src="ufo.mp3"></audio>
+      </div>
+      <div class="button-container">
+          <button onclick="toggleAudio('rock')">Rock Track</button>
+          <audio id="rock" src="rock.mp3"></audio>
+      </div>
+      <div class="button-container">
+          <button onclick="toggleAudio('adventure')">Adventure Track</button>
+          <audio id="adventure" src="adventure.mp3"></audio>
+      </div>
+  </div>
+
+  <script src="scripts.js"></script>
+
+
+
+    <!-- BUTTON LAYOUT ON AUDIO PAGE-->
+
+    <p>I'm genuinely excited to collaborate with teams to create new soundtracks and build emotional masterpieces with talented people. The idea of working together to push the boundaries of what's possible in music really motivates me. I'm always looking for new ways to evoke powerful emotions and create something truly special.</p>
+    
+    <div class="paragraph-container">
+      <p class="moving-square-paragraph">I'm thrilled at the prospect of joining the team and diving into various projects. The opportunity to collaborate and contribute my skills across different areas excites me. I’m ready to roll up my sleeves and start working on innovative and challenging projects, bringing my creativity and enthusiasm to every task.</p>
+      <div class="moving-square"></div>
+    </div>
+</article>
+</section>
+
+<footer class="footer" id="footer">
+<p>&copy; 2024 Christopher Brigham. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

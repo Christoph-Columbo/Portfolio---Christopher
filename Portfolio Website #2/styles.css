@@ -1,0 +1,669 @@
+/* Global settings */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER IMAGES */
+
+header {
+  background-image: url('montana.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px; /* Increased padding for thickness */
+  border-bottom: solid 3px;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-left: 20%; /* Match this to the width of the navbar */
+}
+
+.header1 {
+  background-image: url('software.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px; /* Increased padding for thickness */
+  border-bottom: solid 3px;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-left: 20%; /* Match this to the width of the navbar */
+}
+
+.header2 {
+  background-image: url('audio.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px; /* Increased padding for thickness */
+  border-bottom: solid 3px;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-left: 20%; /* Match this to the width of the navbar */
+}
+
+.header3 {
+  background-image: url('management.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px; /* Increased padding for thickness */
+  border-bottom: solid 3px;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-left: 20%; /* Match this to the width of the navbar */
+}
+/* HEADER IMAGES */
+
+
+
+
+
+
+
+/***** NAVIGATION FUNCTIONALITY *****/
+.nav-container {
+  height: auto; /* Allow it to grow with content */
+}
+
+nav {
+  float: left;
+  width: 20%;
+  height: 100vh; /* Set height to fill the viewport height */
+  background: #e7e7e7;
+  padding: 20px;
+  position: fixed; /* Keep the navbar fixed while scrolling */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  border-right: 3px solid black; /* Add a thin black border to the right side */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Ensure the "Contact Me" tab is positioned correctly */
+}
+
+nav ul li {
+  margin-bottom: 20px; /* Adds space between the items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+  text-align: left; /* Align text to the left */
+  background-color: #e7e7e7; /* Background color matching other nav items */
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px 2px rgb(224, 102, 2);
+  color: rgb(224, 102, 2); /* Change the text color to orange on hover */
+}
+
+nav ul li a:active {
+  box-shadow: 0 0 10px 2px rgb(224, 102, 2);
+  color: orange; /* Maintain the text color when active */
+}
+/***** NAVIGATION FUNCTIONALITY *****/
+
+
+
+
+
+
+
+
+/**** CONTACT ME BUTTON ******/
+nav ul li.contact-tab {
+  position: absolute;
+  bottom: -500px; /* Moved up by 5 pixels */
+  width: calc(100% - 40px); 
+  left: 25px; 
+  border-top: 2px solid black;
+  text-align: center; 
+  font-weight: bold;
+}
+
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Smooth fade-in/out */
+}
+
+.popup-content {
+  background-color: #ebeaea; /* White background for contrast */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  width: 400px; /* Adjust width as needed */
+  max-width: 90%; /* Responsive design */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  position: relative;
+  transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #da6d14; /* Red color for the close button */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #c0392b; /* Darker red on hover */
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: #333333; /* Dark text color */
+  font-family: 'Arial', sans-serif; /* Consistent font style */
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content label {
+  margin: 10px 0 5px;
+  color: #555555; /* Lighter text color */
+}
+
+.popup-content input,
+.popup-content textarea {
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif; /* Consistent font style */
+}
+
+.popup-content button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e74c3c; /* Button color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #c0392b; /* Darker shade on hover */
+}
+/****** CONTACT ME BUTTON ******/
+
+
+
+
+
+
+
+/**** PARAGRAPH BULLET POINT FUNCTIONS ****/
+.bullet-points {
+  list-style-type: disc; /* Default bullet points */
+  padding-left: 20px; /* Space between the bullet points and text */
+}
+
+.bullet-points li {
+  margin-bottom: 10px; /* Space between list items */
+}
+/**** PARAGRAPH BULLET POINT FUNCTIONS ****/
+
+
+
+
+
+
+
+
+
+/**** VERSION 1 ANIMATIONS HORIZONTAL SQUARES ON PARAGRAPHS ****/
+.paragraph-container {
+  position: relative;
+  margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.moving-square-paragraph {
+  margin: 0; /* Remove default paragraph margin */
+}
+
+.moving-square {
+  width: 35px; /* Size of the square */
+  height: 5px;
+  background-color: orange;
+  position: absolute;
+  top: 100%; /* Position the square below the paragraph */
+  left: 0;
+  margin-top: 2px; /* Adjust the vertical position by 2 pixels */
+  animation: moveSquare 10s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes moveSquare {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+/**** VERSION 1 ANIMATIONS HORIZONTAL SQUARES ON PARAGRAPHS ****/
+
+
+
+
+/**** VERSION 2 ANIMATIONS HORIZONTAL SQUARES ON PARAGRAPHS ****/
+.paragraph-container1 {
+  position: relative;
+  margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.moving-square-paragraph1 {
+  margin: 0; /* Remove default paragraph margin */
+  padding: 10px 0; /* Optional: Adjust space around text */
+}
+
+.moving-square1 {
+  width: 35px; /* Size of the square */
+  height: 5px;
+  background-color: rgb(210, 99, 1);
+  position: absolute;
+  top: 100%; /* Position the square below the paragraph */
+  left: 0;
+  margin-top: 2px; /* Adjust the vertical position by 2 pixels */
+  animation: moveSquare2 15s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes moveSquare2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+/**** VERSION 2 ANIMATIONS HORIZONTAL SQUARES ON PARAGRAPHS ****/
+
+
+
+
+
+
+/**** VERSION 3 ANIMATIONS FOR MULTIPLE SQUARES ****/
+.paragraph-container3 {
+  position: relative;
+  margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.moving-square-paragraph3 {
+  margin: 0; /* Remove default paragraph margin */
+  position: relative;
+}
+
+.moving-squares3 {
+  position: absolute;
+  bottom: -13px; /* Move the squares up by 3 pixels */
+  left: 0;
+  width: 100%; /* Ensure it spans the width of the container */
+  height: 10px; /* Ensure the container is tall enough for the squares */
+}
+
+.moving-square3 {
+  width: 8px; /* Size of the square */
+  height: 5px; /* Size of the square */
+  background-color: rgb(255, 196, 0);
+  position: absolute;
+  bottom: 0; /* Align the squares to the bottom of the container */
+}
+
+.square1 {
+  animation: moveSquare3 5s linear infinite; /* Fastest */
+  left: -10px; /* Start position off-screen */
+}
+
+.square2 {
+  animation: moveSquare3 6s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square3 {
+  animation: moveSquare3 7s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square4 {
+  animation: moveSquare3 8s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square5 {
+  animation: moveSquare3 9s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square6 {
+  animation: moveSquare3 10s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square7 {
+  animation: moveSquare3 11s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square8 {
+  animation: moveSquare3 12s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square9 {
+  animation: moveSquare3 13s linear infinite;
+  left: -10px; /* Start position off-screen */
+}
+
+.square10 {
+  animation: moveSquare3 14s linear infinite; /* Slowest */
+  left: -10px; /* Start position off-screen */
+}
+
+@keyframes moveSquare3 {
+  0% {
+    transform: translateX(0); /* Start at the initial position */
+  }
+  100% {
+    transform: translateX(calc(100vw + 10px)); /* Move to the right, past the viewport */
+  }
+}
+/**** ANIMATION FOR MULTIPLE SQUARES ****/
+
+
+
+
+
+
+
+
+
+
+/* Style the article section */
+article {
+  margin-left: 20%; /* Start the article right after the navbar */
+  padding: 20px;
+  background-color: #ffffff;
+  height: auto; /* Adjusted to auto for dynamic content height */
+  width: 80%; /* Take up the remaining width of the screen */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+}
+
+/* Define the shaking animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Image container styles */
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  flex-wrap: wrap;
+  gap: 160px; /* Space between the images */
+  padding: 20px; /* Optional: Add padding to the container */
+}
+
+/* Style for images */
+.image-container img {
+  border: 5px solid rgb(224, 102, 2); /* Orange border */
+  width: 190px; /* Adjust as needed */
+  height: 190px; /* Adjust as needed */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 50%; /* Makes the border circular */
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8); /* Adds a shadow with offset, blur, and color */
+}
+
+/* Add the shaking effect on hover */
+.image-container img:hover {
+  animation: shake 0.6s ease; /* Apply shake animation */
+}
+
+
+.image-container img {
+  border: 5px solid rgb(224, 102, 2); /* Orange border */
+  width: 190px; /* Adjust as needed */
+  height: 190px; /* Adjust as needed */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 50%; /* Makes the border circular */
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8); /* Adds a shadow with offset, blur, and color */
+}
+
+/*** PROFILE PICTURE INFORMATION ***/
+
+.image-container1 {
+  display: flex;
+  justify-content: flex-end; /* Align the images to the right */
+  gap: 160px; /* Space between the images */
+  padding: 20px; /* Optional: Add padding to the container */
+  position: relative; /* For overlay positioning */
+}
+
+.image-container1 img {
+  border: 3px solid rgb(224, 102, 2); 
+  width: 290px; 
+  height: 400px; 
+  object-fit: cover; 
+  border-radius: 20%; 
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for effects */
+  position: relative; /* Ensure the image is positioned relative to the container */
+}
+
+.image-container1 img:hover {
+  transform: scale(1.1) rotate(5deg); /* Slight zoom-in and rotation */
+  box-shadow: 0 0 20px rgba(224, 102, 2, 0.8); /* Glowing shadow */
+  filter: brightness(1.2); /* Slightly brighter image */
+}
+
+.image-container1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20%; /* Match image border radius */
+  background: rgba(224, 102, 2, 0.3); /* Semi-transparent orange overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1; /* Place overlay above image */
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+.image-container1 img:hover + ::before {
+  opacity: 1;
+}
+
+/*** PROFILE PICTURE INFORMATION ***/
+
+
+
+
+
+
+
+/*** AUDIO BUTTONS ****/
+
+.audio-buttons {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Two columns */
+    gap: 55px; /* Space between buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-buttons button {
+    background-color: rgb(224, 102, 2); /* Orange background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 12px 25px; /* Add padding */
+    font-size: 18px; /* Adjust font size */
+    border-radius: 50px; /* Rounded corners for a pill shape */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-bottom: 10px; /* Space below the button */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(224, 102, 2, 0.5); /* Soft shadow with orange color */
+}
+
+.audio-buttons button:hover {
+    background-color: rgb(190, 89, 1); /* Darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 0 15px 3px rgb(224, 102, 2); /* Glowing effect on hover */
+}
+
+.audio-buttons button:active {
+    background-color: rgb(160, 72, 0); /* Even darker orange when clicked */
+    transform: scale(0.95); /* Slightly shrink the button when clicked */
+    box-shadow: 0 0 10px 2px rgb(224, 102, 2); /* Glowing effect when active */
+}
+
+/*** AUDIO BUTTONS ****/
+
+
+
+
+
+
+
+
+/***** POP UP WINDOW CONTACT ME OPTION ****/
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup content box */
+.popup-content {
+  background-color: white;
+  padding: 50px;
+  padding-bottom: 100px; /* Add padding to prevent overlap with footer */
+  border-radius: 5px;
+  width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px; /* Adjusted for better placement */
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Contact button in navbar */
+.contact-button {
+  margin: 60px 0; /* Adjust margin to ensure space from footer */
+  padding: 70px 20px; /* Adjust padding as needed */
+}
+
+/* Ensure space below the footer */
+.containerL {
+  padding-bottom: 170px; /* Adjust this value to be more than the height of the footer */
+}
+
+
+
+
+
+
+/***** FOOTER INFORMATION ****/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 60px; /* Height of the footer */
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding-bottom: 200px; /* Ensure space for footer */
+  }
+}
